@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <global_param>
+  
+   <paths>
+  	<repo add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/ICN_Adelantado</absolute>
+		<relative>repo</relative>
+	</repo>
+	<data add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>data</relative>
+	</data>
+	<source add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>src</relative>
+	</source>
+    <data_intermediate add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>02-01.TrainModel/data</relative>
+	</data_intermediate>
+    <param_global add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>02-01.TrainModel/param/global</relative>
+	</param_global>
+    <param_local add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>02-01.TrainModel/param/local</relative>
+	</param_local>
+	<script add_surveyCode = "FALSE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>02-01.TrainModel/code/scripts</relative>
+	</script>
+	<log add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>02-01.TrainModel/metrics/log</relative>
+	</log>
+	<train_source add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>02-01.TrainModel/code/src</relative>
+	</train_source>
+  </paths>
+
+  
+  <packages> 
+    <package repo="CRAN">
+      <name>data.table</name>
+    </package>
+	<package repo="CRAN">
+      <name>futile.logger</name>
+    </package>
+	<package repo="CRAN">
+      <name>tidyr</name>
+    </package>	
+	<package repo="CRAN">
+      <name>lubridate</name>
+    </package>
+	<package repo="CRAN">
+      <name>RepoTime</name>
+    </package>
+	<package repo="CRAN">
+      <name>StQ</name>
+    </package>
+    <package repo="CRAN">
+      <name>stringr</name>
+    </package>
+	<package repo="CRAN">
+      <name>xml2</name>
+    </package>
+    <package repo="CRAN">
+      <name>mltools</name>
+    </package>
+	<package repo="CRAN">
+      <name>lightgbm</name>
+    </package>
+	<package repo="CRAN">
+      <name>xgboost</name>
+    </package>
+  </packages>
+  
+  <functions>
+	<function path = "train_source">
+		<name>train_model</name>
+	</function>
+	<function path = "train_source_survey">
+		<name>encode_regressors</name>
+	</function>
+	<function path = "train_source_survey">
+		<name>impute_NA</name>
+	</function>
+	<function path = "train_source_survey">
+		<name>impute_NA_rates</name>
+	</function>
+	<function path = "source_survey">
+		<name>setup_predictions</name>
+	</function>   
+	<function path = "source">
+		<name>create_log</name>
+	</function>
+	<function path = "source">
+		<name>close_log</name>
+	</function>	
+	<function path = "source">
+		<name>save_model</name>
+	</function> 
+  </functions>
+  </global_param>
