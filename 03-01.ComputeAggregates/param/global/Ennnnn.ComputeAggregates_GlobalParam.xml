@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <global_param>
+    
+  <paths>
+   	<repo add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/ICN_Adelantado</absolute>
+		<relative>repo</relative>
+	</repo>
+	<data add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>data</relative>
+	</data>
+	<source add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>src</relative>
+	</source>
+    <data_intermediate add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>03-01.ComputeAggregates/data</relative>
+	</data_intermediate>
+    <param_global add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>03-01.ComputeAggregates/param/global</relative>
+	</param_global>
+    <param_local add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>03-01.ComputeAggregates/param/local</relative>
+	</param_local>
+	<script add_surveyCode = "FALSE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>03-01.ComputeAggregates/code/scripts</relative>
+	</script>
+	<log add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>03-01.ComputeAggregates/metrics/log</relative>
+	</log>
+	<indicators add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>03-01.ComputeAggregates/metrics/indicators</relative>
+	</indicators>
+	<aggregates_source add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>03-01.ComputeAggregates/code/src</relative>
+	</aggregates_source>
+  </paths>
+
+  
+  <packages> 
+     <package repo="CRAN">
+      <name>futile.logger</name>
+    </package>
+    <package repo="CRAN">
+      <name>data.table</name>
+    </package>
+	<package repo="CRAN">
+      <name>tidyr</name>
+    </package>	
+	<package repo="CRAN">
+      <name>dplyr</name>
+    </package>
+	<package repo="CRAN">
+      <name>lubridate</name>
+    </package>
+	<package repo="CRAN">
+      <name>RepoTime</name>
+    </package>
+	<package repo="CRAN">
+      <name>RepoReadWrite</name>
+    </package>
+	<package repo="CRAN">
+      <name>RepoUtils</name>
+    </package>
+	<package repo="CRAN">
+      <name>StQ</name>
+    </package>
+    <package repo="CRAN">
+      <name>stringr</name>
+    </package>
+	<package repo="CRAN">
+      <name>xml2</name>
+    </package>
+	<package repo="CRAN">
+      <name>haven</name>
+    </package>
+  </packages>
+  
+  <functions>
+	<function path = "source_survey">
+		<name>actiToSubdivi</name>
+	</function> 
+	<function path = "aggregates_source">
+		<name>computeTotal</name>
+	</function>
+	<function path = "aggregates_source">
+		<name>computeElementaryIndices</name>
+	</function>
+	<function path = "aggregates_source">
+		<name>computeComposedIndices</name>
+	</function>
+	<function path = "aggregates_source_survey">
+		<name>calculate_elementary_index_batch</name>
+	</function>
+	<function path = "aggregates_source_survey">
+		<name>calculate_composed_index_batch</name>
+	</function>
+	<function path = "aggregates_source_survey">
+		<name>prepare_microdata</name>
+	</function>
+	<function path = "aggregates_source_survey">
+		<name>prepare_validatedData</name>
+	</function>
+	<function path = "aggregates_source_survey">
+		<name>identifySample</name>
+	</function>
+	<function path = "aggregates_source_survey">
+		<name>calculate_rate_of_change_batch</name>
+	</function>
+	<function path = "source">
+		<name>spec_repoFiles</name>
+	</function>
+	<function path = "source">
+		<name>provinciaToCCAA</name>
+	</function>
+	<function path = "source">
+		<name>create_log</name>
+	</function>
+	<function path = "source">
+		<name>close_log</name>
+	</function>	
+  </functions>
+  </global_param>

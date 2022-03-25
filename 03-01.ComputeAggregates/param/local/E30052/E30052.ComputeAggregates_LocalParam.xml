@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local_param>
+	<files_info>
+		<DDversion>1</DDversion>
+		<encoded_historical_FD_fileName>historical_FD_withRegressors_target_woNA_encoded.dt.rds</encoded_historical_FD_fileName>
+		<predictions_fileName>predictions.MM[mm][aaaa].batch[bb].dt.rds</predictions_fileName>
+		<errors_fileName>rmse_unit.MM[mm][aaaa].batch[bb].dt.rds</errors_fileName>
+		<aggregate_index_estimation_fileName>aggregate_index_estimation.MM[mm][aaaa].batch[bb].dt.rds</aggregate_index_estimation_fileName>
+		<aggregate_estimation_fileName>aggregate_estimation.MM[mm][aaaa].batch[bb].dt.rds</aggregate_estimation_fileName>
+		<aggregate_index_true_fileName>aggregate_index_true.MM[mm][aaaa].batch[bb].dt.rds</aggregate_index_true_fileName>
+		<aggregate_true_fileName>aggregate_true.MM[mm][aaaa].batch[bb].dt.rds</aggregate_true_fileName>
+		<sampleSize_fileName>sample_size.dt.rds</sampleSize_fileName>
+	</files_info>
+	<time>
+		<initialFF>MM012015</initialFF>
+		<initialFD>MM022016</initialFD>
+		<initialPred>MM042016</initialPred>
+		<initialError>MM102016</initialError>
+	</time>
+	<execution>
+		<target_var>cn01FF</target_var>
+		<id_var>norden, month, year, batch</id_var>
+		<collected_var>cn01</collected_var>
+		<transform_target></transform_target>		
+	</execution>
+</local_param>
