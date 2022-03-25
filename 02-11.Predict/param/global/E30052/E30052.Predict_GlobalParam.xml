@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parametros_globales>
+  
+  <statistical_program>
+    <code_IOE>E30052</code_IOE>
+  </statistical_program>
+    
+  <emails>
+    <email>
+      <address>david.salgado.fernandez@ine.es</address>
+      <unit>Dpto. Metodología y Desarrollo de la Producción Estadística</unit>
+    </email>
+     <email>
+      <address>sandra.barragan.andres@ine.es</address>
+      <unit>Dpto. Metodología y Desarrollo de la Producción Estadística</unit>
+    </email>
+  </emails>
+  
+</parametros_globales>

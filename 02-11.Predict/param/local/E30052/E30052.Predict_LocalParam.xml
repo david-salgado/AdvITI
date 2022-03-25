@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local_param>
+	<files_info>
+		<encoded_historical_FD_fileName>historical_FD_withRegressors_target_woNA_encoded.dt.rds</encoded_historical_FD_fileName>
+		<predictions_fileName>predictions.MM[mm][aaaa].batch[bb].dt.rds</predictions_fileName>
+		<model_fileName>model_lgb.MM[mm][aaaa].model</model_fileName>
+		<model_t0_fileName>model_t0_lgb.MM[mm][aaaa].model</model_t0_fileName>
+	</files_info>
+	<time>
+		<initialFF>MM012015</initialFF>
+		<initialFD>MM022016</initialFD>
+	</time>
+	<execution>
+		<target_var>cn01FF</target_var>
+		<id_var>norden, month, year, batch</id_var>
+		<collected_var>cn01</collected_var>
+		<model_params>
+			<label>temporal.model</label>
+			<varsToRemove>norden, numidest, month, year, batch, cn01, resulta_Si, resulta_No, resulta_Baja, resulta_Cero</varsToRemove>
+			<varsToRemove_current>it_4ca, tm_4ca, ta_4ca, tl_4ca, tm12_4ca, it_4, tm_4, ta_4, tl_4, tm12_4, it_3ca, tm_3ca, ta_3ca, tl_3ca, tm12_3ca, it_3, tm_3, ta_3, tl_3, tm12_3, ipri4_ca, ipri3_ca, ipri3, envio, tasa_cn01_1_0, tasa_cn01_estrato_1_0, tasa_cn01_CNAE2_est_1_0, tasa_cn01_CNAE3_est_1_0, tasa_cn01_actiFF_1_1_0, tasa_cn01_CNAE2_emp_ccaa_1_0, tasa_cn01_CNAE3_est_ccaa_1_0, tasa_cn01_actiFF_1_ccaa_1_0, tasa_cn01_6_0, tasa_cn01_estrato_6_0, tasa_cn01_CNAE2_est_6_0, tasa_cn01_CNAE3_est_6_0, tasa_cn01_actiFF_1_6_0, tasa_cn01_CNAE2_emp_ccaa_6_0, tasa_cn01_CNAE3_est_ccaa_6_0, tasa_cn01_actiFF_1_ccaa_6_0, tasa_cn01_12_0, tasa_cn01_estrato_12_0, tasa_cn01_CNAE2_est_12_0, tasa_cn01_CNAE3_est_12_0, tasa_cn01_actiFF_1_12_0, tasa_cn01_CNAE2_emp_ccaa_12_0, tasa_cn01_CNAE3_est_ccaa_12_0, tasa_cn01_actiFF_1_ccaa_12_0, tasa_cn01_3_0, tasa_cn01_estrato_3_0, tasa_cn01_CNAE2_est_3_0, tasa_cn01_CNAE3_est_3_0, tasa_cn01_actiFF_1_3_0, tasa_cn01_CNAE2_emp_ccaa_3_0, tasa_cn01_CNAE3_est_ccaa_3_0, tasa_cn01_actiFF_1_ccaa_3_0, mean_cnae2_est, mean_cnae2_est_ccaa, mean_cnae3_est, mean_cnae3_est_ccaa, mean_cnae1_est, mean_cnae1_est_ccaa, mean_cnae4_est, mean_cnae4_est_ccaa, std_cnae3_est, std_cnae3_est_ccaa, std_cnae2_est, std_cnae2_est_ccaa, std_cnae1_est, std_cnae1_est_ccaa, std_cnae4_est, std_cnae4_est_ccaa</varsToRemove_current>
+		</model_params>
+	</execution>
+</local_param>
