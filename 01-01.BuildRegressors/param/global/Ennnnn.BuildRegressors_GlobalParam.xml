@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <global_param>
+  
+  
+  <paths>
+  	<repo add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/ICN_Adelantado</absolute>
+		<relative>repo</relative>
+	</repo>
+	<data add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>data</relative>
+	</data>
+	<source add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>src</relative>
+	</source>
+    <data_intermediate add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>01-01.BuildRegressors/data</relative>
+	</data_intermediate>
+    <param_global add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>01-01.BuildRegressors/param/global</relative>
+	</param_global>
+    <param_local add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>01-01.BuildRegressors/param/local</relative>
+	</param_local>
+	<script add_surveyCode = "FALSE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>01-01.BuildRegressors/code/scripts</relative>
+	</script>
+	<log add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>01-01.BuildRegressors/metrics/log</relative>
+	</log>
+	<regressors_source add_surveyCode = "TRUE">
+		<absolute>N:/UDMTD/UDTMDCOM/AdvITI_github</absolute>
+		<relative>01-01.BuildRegressors/code/src</relative>
+	</regressors_source>
+	<external1 add_surveyCode = "FALSE" name = "IPRI">
+			<absolute>N:/UDMTD/UDTMDCOM/ICN_Adelantado/data</absolute>
+			<relative>IPI_IPRI/IPRI_082021</relative>
+	</external1>
+	<external2 add_surveyCode = "FALSE" name = "IPI">
+			<absolute>N:/UDMTD/UDTMDCOM/ICN_Adelantado/data</absolute>
+			<relative>IPI_IPRI/IPI_072021</relative>
+	</external2>
+  </paths>
+
+  
+  <packages> 
+    <package repo="CRAN">
+      <name>data.table</name>
+    </package>
+	<package repo="CRAN">
+      <name>futile.logger</name>
+    </package>
+	<package repo="CRAN">
+      <name>purrr</name>
+    </package>
+	<package repo="miniCRAN">
+      <name>RepoTime</name>
+    </package>
+	<package repo="miniCRAN">
+      <name>RepoUtils</name>
+    </package>
+	<package repo="miniCRAN">
+      <name>StQ</name>
+    </package>
+	<package repo="miniCRAN">
+      <name>RepoReadWrite</name>
+    </package>
+	<package repo="CRAN">
+      <name>tidyr</name>
+    </package>
+    <package repo="CRAN">
+      <name>stringr</name>
+    </package>
+	<package repo="CRAN">
+      <name>xml2</name>
+    </package>
+    	<package repo="CRAN">
+      <name>mltools</name>
+  </package>
+	<package repo="CRAN">
+      <name>zoo</name>
+    </package>
+    <package repo="CRAN">
+      <name>lubridate</name>
+    </package>
+	<package repo="CRAN">
+      <name>haven</name>
+    </package>
+  </packages>
+  
+  <functions>
+	<function path = "regressors_source">
+		<name>CNAEMIG</name>
+	</function>
+	<function path = "regressors_source">
+		<name>compute_rates</name>
+	</function>
+	<function path = "regressors_source">
+		<name>CodeManagement</name>
+	</function>
+	<function path = "source_survey">
+		<name>actiToSubdivi</name>
+	</function>
+	<function path = "regressors_source_survey">
+		<name>setup_FF</name>
+	</function>
+	<function path = "regressors_source_survey">
+		<name>setup_FD</name>
+	</function>
+	<function path = "regressors_source_survey">
+		<name>build_FD_longitudinal_regressors</name>
+	</function>
+		<function path = "regressors_source_survey">
+		<name>build_FD_current_regressors</name>
+	</function>
+	<function path = "regressors_source_survey">
+		<name>build_FD_external_regressors</name>
+	</function>
+	<function path = "regressors_source_survey">
+		<name>read_external_data</name>
+	</function>
+	<function path = "regressors_source_survey">
+		<name>build_target_variable</name>
+	</function>
+	<function path = "source">
+		<name>create_log</name>
+	</function>
+	<function path = "source">
+		<name>close_log</name>
+	</function>
+	<function path = "source">
+		<name>spec_repoFiles</name>
+	</function>
+	<function path = "source">
+		<name>provinciaToCCAA</name>
+	</function>
+  </functions>
+  
+  
+  </global_param>

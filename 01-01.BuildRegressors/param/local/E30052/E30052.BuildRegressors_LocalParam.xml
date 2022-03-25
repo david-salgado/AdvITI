@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local_parameters>
+	<files_info>
+		<DDversion>1</DDversion>
+		<historical_FD_fileName>historical_FD_withRegressors.dt.rds</historical_FD_fileName>
+		<target_FD_fileName>historical_FD_withRegressors_target.dt.rds</target_FD_fileName>
+		<historical_FF_fileName>historical_FF.dt.rds</historical_FF_fileName>
+		<longitudinalRegressors_fileName>longitudinal_regressors.MM[mm][aaaa].batch[bb].rds</longitudinalRegressors_fileName>
+		<currentRegressors_fileName>longitudinal_current_regressors.MM[mm][aaaa].batch[bb].rds</currentRegressors_fileName>
+		<externalRegressors_fileName>longitudinal_current_external_regressors.MM[mm][aaaa].batch[bb].rds</externalRegressors_fileName>
+	</files_info>
+	<time>
+		<initialFF>MM012015</initialFF>
+		<initialFD>MM022016</initialFD>
+		<numRevisedFF>0</numRevisedFF>
+		<lagsFF>13</lagsFF>
+	</time>
+	<execution>
+		<id_var>norden, month, year, batch</id_var>
+		<target_var>cn01</target_var>
+		<thresholds>
+			<relative_zero>100</relative_zero>
+		</thresholds>
+	</execution>
+</local_parameters>
