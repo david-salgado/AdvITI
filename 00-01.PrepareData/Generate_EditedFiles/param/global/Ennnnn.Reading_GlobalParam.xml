@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <parametros_globales>
+  
+  
+  <paths>
+	<repo>N:/UDMTD/UDTMDCOM/ICN_Adelantado/repo</repo>
+	<data>N:/UDMTD/UDTMDCOM/ICN_Adelantado/data</data>
+    <root>N:/UDMTD/UDTMDCOM/AdvITI_github/00-01.PrepareData/Generate_EditedFiles</root>
+    <data_intermediate>N:/UDMTD/UDTMDCOM/ICN_Adelantado/00-01.PrepareData/GenerateFD/datos</data_intermediate>
+    <param_global>param/global</param_global>
+    <param_local>param/local</param_local>
+    <source>code/src</source>
+    <script>code/scripts</script>
+    <log>metrics/log</log>
+	<miniCRAN>G:/GRUPO_SINODO_METODOLOGIA/miniCRANdev</miniCRAN>
+  </paths>
+  
+  <packages>
+    <package repo="CRAN" neededIn = "all">
+      <name>RODBC</name>
+    </package>
+	<package repo="miniCRAN" neededIn = "all">
+      <name>fastReadfwf</name>
+    </package>
+    <package repo="CRAN" neededIn = "all">
+      <name>openxlsx</name>
+    </package>  
+    <package repo="CRAN" neededIn = "all">
+      <name>data.table</name>
+    </package>
+    <package repo="CRAN" neededIn = "all">
+      <name>stringr</name>
+    </package>
+    <package repo="CRAN" neededIn = "all">
+      <name>haven</name>
+    </package>
+    <package repo="CRAN" neededIn = "all">
+      <name>lubridate</name>
+    </package>
+    <package repo="CRAN" neededIn = "all">
+      <name>stringi</name>
+    </package>
+    <package repo="CRAN" neededIn = "all">
+      <name>rmarkdown</name>
+    </package>
+    <package repo="CRAN" neededIn = "all">
+      <name>sendmailR</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "all">
+      <name>RepoTime</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "all">
+      <name>StQ</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "all">
+      <name>RepoReadWrite</name>
+    </package>
+
+    <package repo="miniCRAN" neededIn = "all">
+      <name>RepoUtils</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "FT,FL">
+      <name>StQImputation</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "FT,FL">
+      <name>TSPred</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "FT,FL">
+      <name>BestTSPred</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "FT,FL">
+      <name>StQPrediction</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "FT,FL">
+      <name>contObsPredModelParam</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "FT,FL">
+      <name>SelEditFunctions</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "FT,FL">
+      <name>SelEditErrorMoment</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "FT,FL">
+      <name>SelEditUnitPriorit</name>
+    </package>
+
+    <package repo="miniCRAN" neededIn = "FL">
+      <name>HRInterval</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "FL">
+      <name>Condition</name>
+    </package>
+    <package repo="miniCRAN" neededIn = "FL">
+      <name>SelEditMonitor</name>
+    </package>
+
+  </packages>
+  
+  <functions>
+    <function>
+      <name>IfElse</name>
+    </function>
+    <function>
+      <name>smartMerge</name>
+    </function>
+	<function>
+		<name>constructName</name>
+	</function>
+	<function>
+		<name>constructNameDate</name>
+	</function>
+	<function>
+		<name>constructStQ</name>
+	</function>
+	<function>
+		<name>readFileINE</name>
+	</function>
+	<function>
+		<name>sendMail</name>
+	</function>
+	<function>
+		<name>InstallLoadPackages</name>
+	</function>
+  </functions>
+  
+  
+  </parametros_globales>

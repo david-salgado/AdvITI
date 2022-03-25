@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parametros_locales>
+  <FD>
+    <path>
+      <output>
+        <description>
+				Ruta completa de acceso a las carpetas donde se escribirán los ficheros 
+				de SAS resultantes. Debe cumplir las espeficaciones de las rutas para 
+				SAS-GRID.
+				En caso de escribirse directamente en el repositorio este elemento debe ir vacío.
+			  </description>
+        <root>N:\UDMTD\UDTMDCOM\ICN_Adelantado</root>
+		<relative>repo\E30052</relative> 
+      </output>
+      <pwd>
+        <description>
+				Ruta completa de acceso al fichero que contiene la contraseña del repositorio para la operación estadística. 
+				Si la ejecución se realiza fuera de SAS-GRID en sistema Windows, esta ruta debe especificarse necesariamente. 
+				</description>
+        <root>C:</root>
+        <relative> </relative>
+        <name>.passWordRepoICN.txt</name>
+      </pwd>	  
+	  <GRID_connection>
+		<user></user>
+		<pwd>
+			<description>
+					Ruta completa de acceso al fichero que contiene la contraseC1a del GRID. 
+					Si la ejecuciC3n se realiza fuera de SAS-GRID en sistema Windows, esta ruta debe especificarse necesariamente. 
+					</description>
+			<root>C:</root>
+			<relative> </relative>
+			<name>.passWordGRID.txt</name>
+		</pwd>
+		<path_GRID>
+			<root>GRINE\Repositorio</root>
+			<relative>Datos\E30049</relative> 
+		</path_GRID>
+	  </GRID_connection>
+
+    </path>
+    <time>
+      <calendar>
+        <description>
+				Datos referidos al calendario de la encuesta: año, número de periodos a generar de forma automática y periodicidad.
+		</description>
+        <year>2021</year>
+        <files_revised_regular>1</files_revised_regular>
+        <periodicity_regular>A</periodicity_regular>
+      </calendar>
+      <lag>
+        <description>Retardo en número de meses respecto a la fecha actual para los cuales se pueden generar datos.</description>
+        <generation>0</generation>
+      </lag>
+      <margin>
+        <description>
+		Margen de días anteriores respecto a la fecha límite de la encuesta en los que si están los ficheros fuente se puede ya ejecutar la generación del FF.
+		</description>
+        <days>0</days>
+      </margin>
+      <base>
+        <description>
+				Base a la que están referidos los datos. Si no se incluye la base este 
+				campo debe quedarse en blanco.
+		</description>
+        <code_repo></code_repo>
+      </base>
+    </time>
+    <sourceFiles>
+      <file>
+        <description></description>
+        <label>icn_pid01</label>
+        <name>pid[mm][aa]01</name>
+        <extension>txt</extension>
+        <path>
+			<root>N:\UDMTD\UDTMDCOM\ICN_Adelantado</root>
+			<relative>data\greco</relative>
+        </path>
+		<schema>
+		    <name>E30052.DisRegistro_V1.AA2020.PID</name>
+			<extension sheet = "Schema" type = "Schema" validate = "FALSE">xlsx</extension>
+			<path>
+				<root>N:\UDMTD\UDTMDCOM\ICN_Adelantado</root>
+				<relative>metadata\00-01.PrepareData</relative>
+			</path>
+        </schema>
+		
+        <conditions language="R">
+          <condToChooseFile></condToChooseFile>
+        </conditions>
+		
+        <rename>  
+		  <var>
+            <fileName>razonsoc</fileName>
+            <newName>razonSocial</newName>
+          </var>  
+		  <var>
+            <fileName>cnaeemp</fileName>
+            <newName>CodCNAE</newName>
+          </var>  
+		  <var>
+            <fileName>direcemp</fileName>
+            <newName>Direccion</newName>
+          </var> 	
+		  <var>
+            <fileName>codpem</fileName>
+            <newName>Codpostal</newName>
+          </var>
+		  <var>
+            <fileName>localiem</fileName>
+            <newName>localidad</newName>
+          </var>
+		  <var>
+            <fileName>provem</fileName>
+            <newName>Codprovincia</newName>
+          </var>
+		  <var>
+            <fileName>muniem</fileName>
+            <newName>Codmunicipio</newName>
+          </var>
+		  <var>
+            <fileName>telefo1</fileName>
+            <newName>telefono1</newName>
+          </var>
+		  <var>
+            <fileName>codtame</fileName>
+            <newName>CodTame</newName>
+          </var>  
+		  <var>
+            <fileName>cnaeest</fileName>
+            <newName>CodCNAEEst</newName>
+          </var>  
+		  <var>
+            <fileName>proves</fileName>
+            <newName>CodprovinciaEst</newName>
+          </var>  
+        </rename>
+		
+        <selection>
+          <structure>
+            <name>matrix</name>
+          </structure>
+          <rows language="R">
+            <condition></condition>
+          </rows>
+          <columns language="R">
+            <varnames>numidest, nif, razonSocial, CodCNAE, Direccion, Codpostal, localidad, Codprovincia, Codmunicipio, telefono1, CodTame, CodCNAEEst, codddpp, ntrab, obsanual1, obsanual2, prioridp, resulta, CodprovinciaEst</varnames>
+          </columns>
+        </selection>
+		
+        <addCols>
+          <newCol language="R">
+            <newVarName>norden</newVarName>
+            <newVarValue>paste0(numidest, '0000P')</newVarValue>
+          </newCol>
+		  <newCol language="R">
+            <newVarName>envio</newVarName>
+            <newVarValue>'01'</newVarValue>
+          </newCol>
+        </addCols>
+		
+        <transform language="R">
+          <pivotName></pivotName>
+          <variableName></variableName>
+          <valueName></valueName>
+        </transform>
+		
+        <setKey>
+          <fileKey>norden</fileKey>
+          <repoKey>norden</repoKey>
+          <equivFile>
+          </equivFile>
+        </setKey>
+		
+        <constructStQ>
+          <description>
+						- melt_StQ
+						- StQ				
+					</description>
+          <method>melt_StQ</method>
+        </constructStQ>
+      </file>
+      <file>
+        <description></description>
+        <label>icn_pgr01</label>
+        <name>pgr[mm][aa]01</name>
+        <extension>txt</extension>
+        <path>
+			<root>N:\UDMTD\UDTMDCOM\ICN_Adelantado</root>
+			<relative>data\greco</relative>
+        </path>
+		<schema>
+		    <name>E30052.DisRegistro_V1.AA2020.PGR</name>
+			<extension sheet = "Schema" type = "Schema" validate = "FALSE">xlsx</extension>
+			<path>
+				<root>N:\UDMTD\UDTMDCOM\ICN_Adelantado</root>
+				<relative>metadata\00-01.PrepareData</relative>
+			</path>
+        </schema>
+		
+        <conditions language="R">
+          <condToChooseFile></condToChooseFile>
+        </conditions>
+		
+        <rename>
+          <var>
+            <fileName>NUMIDEST</fileName>
+            <newName>numidest</newName>
+          </var>  
+		  <var>
+            <fileName>ACTI1</fileName>
+            <newName>acti</newName>
+          </var>  
+		  <var>
+            <fileName>CN01</fileName>
+            <newName>cn01</newName>
+          </var>  
+		  <var>
+            <fileName>CN01A</fileName>
+            <newName>cn01a</newName>
+          </var>  
+		  <var>
+            <fileName>CN02</fileName>
+            <newName>cn02</newName>
+          </var>  
+		  <var>
+            <fileName>CN02A</fileName>
+            <newName>cn02a</newName>
+          </var> 	
+		  <var>
+            <fileName>CN03</fileName>
+            <newName>cn03</newName>
+          </var>
+		  <var>
+            <fileName>CN03A</fileName>
+            <newName>cn03a</newName>
+          </var>
+		  <var>
+            <fileName>CN04</fileName>
+            <newName>cn04</newName>
+          </var>
+		  <var>
+            <fileName>CN04A</fileName>
+            <newName>cn04a</newName>
+          </var>
+		  <var>
+            <fileName>CN05</fileName>
+            <newName>cn05</newName>
+          </var>
+		  <var>
+            <fileName>CN05A</fileName>
+            <newName>cn05a</newName>
+          </var>
+        </rename>
+		
+        <selection>
+          <structure>
+            <name>matrix</name>
+          </structure>
+          <rows language="R">
+            <condition></condition>
+          </rows>
+          <columns language="R">
+            <varnames>numidest, acti, cn01, cn01a, cn02, cn02a, cn03, cn03a, cn04, cn04a, cn05, cn05a</varnames>
+          </columns>
+        </selection>
+		
+        <addCols>
+          <newCol language="R">
+            <newVarName>norden</newVarName>
+            <newVarValue>paste0(numidest, '0000P')</newVarValue>
+          </newCol>
+		  <newCol language="R">
+            <newVarName>envio</newVarName>
+            <newVarValue>'01'</newVarValue>
+          </newCol>
+        </addCols>
+		
+        <transform language="R">
+          <pivotName></pivotName>
+          <variableName></variableName>
+          <valueName></valueName>
+        </transform>
+		
+        <setKey>
+          <fileKey>norden</fileKey>
+          <repoKey>norden</repoKey>
+          <equivFile>
+          </equivFile>
+        </setKey>
+		
+        <constructStQ>
+          <description>
+						- melt_StQ
+						- StQ				
+					</description>
+          <method>melt_StQ</method>
+        </constructStQ>
+      </file>
+    </sourceFiles>
+  </FD>
+</parametros_locales>
