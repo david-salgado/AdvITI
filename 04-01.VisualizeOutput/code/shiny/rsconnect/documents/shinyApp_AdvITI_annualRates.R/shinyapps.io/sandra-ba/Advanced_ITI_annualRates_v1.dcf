@@ -1,0 +1,14 @@
+name: Advanced_ITI_annualRates_v1
+title: Advanced_ITI_annualRates_v1
+username:
+account: sandra-ba
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5554591
+bundleId: 5694422
+url: https://sandra-ba.shinyapps.io/Advanced_ITI_annualRates_v1/
+when: 1647504283.01366
+lastSyncTime: 1647504283.01366
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: AdvITI_ts_indices_publi.rds|AdvITI_ts_monthlyRates_publi.rds|server_index.R|server_monthly_rates.R|shinyApp_AdvITI_indices.R|shinyApp_AdvITI_monthlyRates.R|ui_index.R|ui_monthly_rates.R

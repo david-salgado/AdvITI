@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local_param>
+	<files_info>
+		<predictions_fileName>predictions.MM[mm][aaaa].batch[bb].dt.rds</predictions_fileName>
+		<errors_fileName>rmse_unit.MM[mm][aaaa].batch[bb].dt.rds</errors_fileName>
+		<aggregate_index_estimation_fileName>aggregate_index_estimation.MM[mm][aaaa].batch[bb].dt.rds</aggregate_index_estimation_fileName>
+		<aggregate_estimation_fileName>aggregate_estimation.MM[mm][aaaa].batch[bb].dt.rds</aggregate_estimation_fileName>
+		<aggregate_index_true_fileName>aggregate_index_true.MM[mm][aaaa].batch[bb].dt.rds</aggregate_index_true_fileName>
+		<aggregate_true_fileName>aggregate_true.MM[mm][aaaa].batch[bb].dt.rds</aggregate_true_fileName>
+		<all_index_fileName>AdvITI_ts_indices.rds</all_index_fileName>
+		<all_annualRates_fileName>AdvITI_ts_annualRates.rds</all_annualRates_fileName>
+		<all_monthlyRates_fileName>AdvITI_ts_monthlyRates.rds</all_monthlyRates_fileName>
+		<all_index_SDC_fileName>AdvITI_ts_indices_publi.rds</all_index_SDC_fileName>
+		<all_annualRates_SDC_fileName>AdvITI_ts_annualRates_publi.rds</all_annualRates_SDC_fileName>
+		<all_monthlyRates_SDC_fileName>AdvITI_ts_monthlyRates_publi.rds</all_monthlyRates_SDC_fileName>
+
+	</files_info>
+	<time>
+		<initialFF>MM012015</initialFF>
+		<initialFD>MM022016</initialFD>
+		<initialPred>MM042016</initialPred>
+		<initialError>MM102016</initialError>
+		<initialRates>MM102017</initialRates>
+		<all_batches>01, 02, 03</all_batches>
+	</time>
+	<execution>
+		<target_var>cn01FF</target_var>
+		<id_var>norden, month, year, batch</id_var>
+		<collected_var>cn01</collected_var>
+	</execution>
+</local_param>
